@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katsu Sando Bar | Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="carrinho-fixo" onclick="abrirCarrinho()">
+        CARRINHO (<span id="contagem">0</span>)
+    </div>
+
+    <header>
+        <p class="branding">EXPERIÊNCIA ORIENTAL</p>
+        <h1>KATSU SANDO BAR</h1>
+    </header>
+
+    <main class="menu-container">
+        <h2 class="categoria-titulo">Sandos</h2>
+        <div id="grid-sandos" class="grid-produtos"></div>
+
+        <h2 class="categoria-titulo">Bebidas</h2>
+        <div id="grid-bebidas" class="grid-produtos"></div>
+    </main>
+
+    <div id="modal-carrinho" class="modal">
+        <div class="modal-content">
+            <h2>SEU PEDIDO</h2>
+            <div id="itens-lista"></div>
+            
+            <div class="total-container">
+                <span>TOTAL</span>
+                <span id="total-valor">R$ 0,00</span>
+            </div>
+            
+            <div class="checkout-form">
+    <input type="text" id="endereco" placeholder="Endereço de Entrega">
+
+    <textarea id="observacao" placeholder="Observações do pedido"></textarea>
+
+    <input type="text" id="cupom" placeholder="Cupom de desconto">
+
+    <select id="pagamento" class="estilo-select">
+        <option value="" disabled selected>Forma de Pagamento</option>
+        <option value="Pix">Pix</option>
+        <option value="Cartão">Cartão</option>
+        <option value="Dinheiro">Dinheiro</option>
+    </select>
+</div>
+
+
+
+            <button class="btn-finalizar" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
+            <button class="btn-cancelar-tudo" onclick="esvaziarCarrinho()">LIMPAR TUDO</button>
+            <button class="btn-voltar" onclick="fecharCarrinho()">
+    ← Voltar ao cardápio
+</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
